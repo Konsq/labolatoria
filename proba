@@ -1,0 +1,40 @@
+public class proba extends punkt{
+
+	   public static void main(String[] args){
+	punkt p1=new punkt();  //tworzenie obiektow
+	punkt p2=new punkt(5);
+
+
+	//obiekt1
+	System.out.println("1."); 	
+	p1.opis();
+	System.out.println("Masa "+ p1.getmasa()); 
+	System.out.println("Moment bezwladnosci: " +p1.moment()); 
+	System.out.println("Moment względem nowej osi " + p1.steiner(9));
+	System.out.println(""); 
+	//obiekt2
+	System.out.println("2."); 
+	p2.opis();
+	System.out.println("Masa "+ p2.getmasa()); 
+	System.out.println("Moment bezwladnosci: " +p2.moment()); 
+	System.out.println("Moment względem nowej osi " + p2.steiner(9));
+	System.out.println(""); 
+	p1.setmasa(20);	//obiekt1, zmiana masy za pomoca akcesora
+	System.out.println("1a. ze zmieniona masa"); 
+	p1.opis();
+	System.out.println("Masa "+ p1.getmasa()); 
+	System.out.println("Moment bezwladnosci: " +p1.moment()); 
+	System.out.println("Moment względem nowej osi " + p1.steiner(9));
+	System.out.println(""); 
+	   
+    float[] tablicapkt = {1, 4, 9, 3.5f}; //deklaracja tablicy obiektow
+    for (int i=0; i<=3; i++) {  //wyswietlenie obiektow tablicy
+    	System.out.println((i+3)+".");
+   punkt pi=new punkt(tablicapkt[i]);
+	System.out.println("Masa "+ pi.getmasa()); 
+	System.out.println("Moment bezwladnosci: " +pi.moment()); 
+	System.out.println("Moment względem nowej osi " + pi.steiner(9));
+	System.out.println(""); 
+}
+	   }
+	    }
